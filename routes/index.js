@@ -52,7 +52,9 @@ router.get("/layout", function(req,res, next) {
             elements.push({position: jQuery(element).position(),
               width:jQuery(element).width(),
               height: jQuery(element).height(),
-              //text: jQuery('*:not(:has(*)):visible', element).text(),
+              border: jQuery(element).css("border-style") == "solid",
+              background: jQuery(element).css("background-image"),
+              'background-color': jQuery(element).css("background-color"),
               type: jQuery(element).get(0).tagName});
           }
         } catch (ex) {}
