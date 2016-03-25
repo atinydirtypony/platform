@@ -9,7 +9,7 @@ phridge.spawn({
 }).then(function (data) {
   console.log("PhantomJS Started");
   phantom = data;
-  phantom.openPage("https://www.google.com/").then(function(data) {
+  phantom.openPage("http://www.cnn.com/").then(function(data) {
     try {
       page = data;
       console.log("Website Loaded");

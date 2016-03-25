@@ -10,14 +10,14 @@
       <script src="/javascripts/emulator.js"></script>
 
   </head>
-  <body ng-app="PlatformApp" onload="init();">
-    <canvas id="demoCanvas" width="500" height="300"></canvas>
-    <div id="emulation" ng-controller="EmulatorController">
+  <body ng-app="PlatformApp" >
+
+    <div id="emulation" ng-controller="EmulatorController" ng-init="init();">
         <form >
             <input type="text" ng-model="targetURL">
             <button ng-click="submitURL()" type="submit">Submit</button>
         </form>
-        <other-page></other-page>
+        <canvas id="demoCanvas" width="1024" height="2000"></canvas>
     </div>
 
   </body>
