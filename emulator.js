@@ -1,1 +1,33 @@
 //this is the javascript for digesting the other page
+
+app= angular.module("PlatformApp", []);
+
+app.controller("EmulatorController", ["$scope", function($scope){
+    $scope.targetURL
+
+    $scope.submitURL = function(){
+        console.log($scope.targetURL)
+    }
+
+}]);
+
+
+app.directive('otherPage', function() {
+     return {
+       restrict: 'E',
+       templateUrl: 'www.google.com'
+       }
+});
+
+
+function init() {
+      var stage = new createjs.Stage("demoCanvas");
+      var circle = new createjs.Shape();
+      circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
+      circle.x = 100;
+      circle.y = 100;
+      stage.addChild(circle);
+      stage.update();
+      }
+
+
